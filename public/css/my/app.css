@@ -1,0 +1,75 @@
+div.dataTables_wrapper {
+    width: auto;
+    margin: 0 auto;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon { left: 0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding input */
+.left-addon input { padding-left: 35px; }
+.right-addon input { padding-right: 35px; }
+
+/* add padding select */
+.left-addon select { padding-left: 32px; }
+.right-addon select { padding-right: 32px; }
+
+/* add padding textarea */
+.left-addon textarea { padding-left: 35px; }
+.right-addon textarea { padding-right: 35px; }
+
+.modal-content .modal-header {
+    color: #fff;
+    background-color:#337ab7;
+    border-color: #337ab7;
+}
+
+#error-form {
+    margin-left: 10px
+}
+
+.loading-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.text-muted {
+    /* margin-left: 15px;
+    margin-right: 35px;
+    text-align: justify;
+    text-justify: inter-word; */
+    word-break: break-all;
+}
+
+h3.profile-username {
+    word-break: break-all;
+}
+
+.user-profile-img {
+    background-color: #e6e6e6;
+    border:1px solid #999999;
+    border-radius: 100%;
+    display: block;
+    margin: auto; 
+    padding:2px;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+}
