@@ -4,6 +4,12 @@ function onlyNumber(input) {
     input.value = numbers;
 }
 
+function onlyNumberDecimal(input) {
+    let value = input.value;
+    let numbers = value.replace(/[^-+0-9.,]/g, "");
+    input.value = numbers;
+}
+
 function showPassword() {
     var x = document.getElementById('password');
     if (x.type === 'password') {
@@ -94,6 +100,7 @@ $('#modal-btn-save').click(function (event) {
         method: method,
         data : form.serialize(),
         beforeSend: function() {
+            console.log(form.serialize());
             Swal.fire({
                 title: 'Loading',
                 text: 'Please wait...',
@@ -151,7 +158,6 @@ $('#modal-btn-save').click(function (event) {
     })
 });
 
-
 $('body').on('click', '.btn-delete', function (event) {
     event.preventDefault();
 
@@ -161,8 +167,8 @@ $('body').on('click', '.btn-delete', function (event) {
         csrf_token = $('meta[name="csrf-token"]').attr('content');
 
     Swal.fire({
-        title: 'Are you sure want to delete ' + title + ' ?',
-        text: 'You won\'t be able to revert this!',
+        title: 'Apakah kamu ingin menghapus data ' + title + ' ?',
+        text: 'Jika kamu tidak ingin abaikan saja',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -193,14 +199,14 @@ $('body').on('click', '.btn-delete', function (event) {
                         Swal.fire({
                             type: 'success',
                             title: 'Success!',
-                            text: 'Data has been deleted!'
+                            text: 'Data sudah dihapus!'
                         });               
                     } else {
                         location.reload();
                         Swal.fire({
                             type: 'success',
                             title: 'Success!',
-                            text: 'Data has been deleted!'
+                            text: 'Data sudah dihapus!'
                         });
                     }                    
                 },
@@ -247,7 +253,11 @@ $('body').on('click', '.btn-show', function (event) {
         success: function (response) {
             Swal.close();
             $('#modal-body').html(response);
-            changePasswordToSymbol();
+            try {
+                changePasswordToSymbol();    
+            } catch (error) {
+                
+            }
         }
     });
 

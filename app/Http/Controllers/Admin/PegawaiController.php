@@ -73,14 +73,6 @@ class PegawaiController extends Controller
         
     }
 
-    public function deleteEmailPassword($email)
-    {
-        $auth = $this->auth;
-        $user = $auth->getUserByEmail($email);
-        $uidUser = $user->uid;
-        $auth->deleteUser($uidUser);
-    }
-
     public function create()
     {
         $model = [];

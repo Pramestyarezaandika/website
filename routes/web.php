@@ -23,5 +23,7 @@ Route::group(['middleware' => 'auth.firebase'], function () {
     Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard');
     Route::get('/table/pegawai', 'Admin\PegawaiController@dataTable')->name('table.pegawai');
     Route::resource('/pegawai', 'Admin\PegawaiController');
+    Route::get('/table/lokasi', 'Admin\LokasiController@dataTable')->name('table.lokasi');
+    Route::resource('/lokasi', 'Admin\LokasiController');
 });
 

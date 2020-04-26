@@ -115,6 +115,11 @@ return [
         [
             'text'        => 'Lokasi',
             'url'         => 'lokasi',
+            'icon'        => 'map',
+        ],
+        [
+            'text'        => 'Track',
+            'url'         => 'track',
             'icon'        => 'map-marker',
         ],
     ],

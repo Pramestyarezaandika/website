@@ -148,8 +148,7 @@
                 {!! Form::checkbox('_password', 
                 0,
                 false, 
-                ['onClick'=>'showPassword()',
-                'id'=>'_password']) !!}
+                ['onClick'=>'showPassword()']) !!}
 
                 {!! Form::label('_password', 
                 'Lihat Password') !!}

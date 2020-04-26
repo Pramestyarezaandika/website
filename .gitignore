@@ -5,8 +5,7 @@
 /secret
 /storage/*.key
 /vendor
-/views/layouts
-/views/vendor
+resources/views/vendor
 .env
 .env.backup
 .phpunit.result.cache
