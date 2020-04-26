@@ -43,10 +43,7 @@
 <script>    
     var isData = {!! json_encode($isDataLokasi) !!};
     var num = {!! json_encode($num) !!};
-    console.log(num);
-    // console.log(isData);    
     if (isData) {
-        // console.log('ada data');
         $('#datatable').DataTable({
             responsive: true,
             processing: true,
@@ -80,7 +77,6 @@
             ]
         });
     } else {
-        // console.log('enggak ada data');
         var id = document.getElementById('th');
         var att = document.createAttribute('hidden'); 
         id.setAttributeNode(att);   
