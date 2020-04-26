@@ -1,8 +1,12 @@
+/config
 /node_modules
 /public/hot
 /public/storage
+/secret
 /storage/*.key
 /vendor
+/views/layouts
+/views/vendor
 .env
 .env.backup
 .phpunit.result.cache

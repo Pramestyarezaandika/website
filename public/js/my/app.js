@@ -177,6 +177,16 @@ $('body').on('click', '.btn-delete', function (event) {
                     '_method': 'DELETE',
                     '_token': csrf_token
                 },
+                beforeSend: function() {
+                    Swal.fire({
+                        title: 'Loading',
+                        text: 'Please wait...',
+                        imageUrl: 'img/loading.gif',
+                        showConfirmButton: false,
+                        allowOutsideClick: false,
+                        imageAlt: 'loading',
+                    });                                
+                },
                 success: function (response) {
                     if (num !== 1) {
                         $('#datatable').DataTable().ajax.reload(); 

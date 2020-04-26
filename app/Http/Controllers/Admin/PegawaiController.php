@@ -402,7 +402,7 @@ class PegawaiController extends Controller
         $user = $auth->getUserByEmail($emailId);
         $userUid = $user->uid;
 
-        $auth->deleteUser($uid);
+        $auth->deleteUser($userUid);
         $db->getChild($id)->remove();
     }
 

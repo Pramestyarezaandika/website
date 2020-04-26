@@ -105,12 +105,17 @@ return [
         [
             'text'        => 'Dashboard',
             'url'         => 'dashboard',
-            'icon'        => 'file',
+            'icon'        => 'dashboard',
         ],
         [
             'text'        => 'Pegawai',
             'url'         => 'pegawai',
             'icon'        => 'users',
+        ],
+        [
+            'text'        => 'Lokasi',
+            'url'         => 'lokasi',
+            'icon'        => 'map-marker',
         ],
     ],
 
